@@ -18,7 +18,7 @@ from contextlib import asynccontextmanager
 
 from sqlmodel import SQLModel, Session, create_engine, select
 from .models import User
-from .auth import *
+from .auth import get_password_hash, verify_password, create_access_token, decode_token
 
 app = FastAPI()
 engine = create_engine("duckdb:///db.duckdb", echo=True)
@@ -53,9 +53,9 @@ def protected(token: str = Depends(oauth2_scheme)):
         raise HTTPException(status_code=401, detail="Invalid or expired token")
     return {"message": f"Hello {payload['sub']}!"}
 
-@app.get("/hello/{app_id}")
-def hello(app_id: int, token: str = Depends(oauth2_scheme)):
-    return {"message": f"Hello {app_id}!"}
+@app.get("/hello/{app_name}")
+def hello(app_name: str, token: str = Depends(oauth2_scheme)):
+    return {"message": f"Hello {app_name}!"}
 
 # if __name__ == "__main__":
 #     import uvicorn
