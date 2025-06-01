@@ -9,3 +9,5 @@
 2025/05/31 18:16:06 [error] 24#24: *1 connect() failed (113: Host is unreachable) while connecting to upstream, client: 10.89.11.48, server: , request: "GET /internal/hello?id=42 HTTP/1.1", upstream: "http://10.89.11.2:8000/backend/hello/42?id=42", host: "localhost:8001"
 2025/05/31 18:17:58 [error] 24#24: *1 connect() failed (113: Host is unreachable) while connecting to upstream, client: 10.89.11.50, server: , request: "GET /internal/hello?id=42 HTTP/1.1", upstream: "http://10.89.11.2:8000/backend/hello/42", host: "localhost:8001"
 2025/05/31 18:20:10 [error] 24#24: *1 connect() failed (113: Host is unreachable) while connecting to upstream, client: 10.89.11.54, server: , request: "GET /internal/hello?id=42 HTTP/1.1", upstream: "http://10.89.11.2:8000/hello/42", host: "localhost:8001"
+2025/06/01 13:53:50 [emerg] 1#1: unknown directive "else" in /etc/nginx/conf.d/default.conf:9
+2025/06/01 13:59:57 [emerg] 1#1: invalid condition "!$app_id" in /etc/nginx/conf.d/default.conf:11

@@ -1,2 +1,8 @@
 fastapi
-uvicorn
+uvicorn[standard]
+sqlmodel
+passlib[bcrypt]
+python-jose
+duckdb
+duckdb-engine
+python-multipart

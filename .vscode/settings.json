@@ -1,0 +1,21 @@
+{
+    "python.testing.pytestArgs": [
+        "${workspaceFolder}/backend/tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "pythonTestExplorer.testFramework": "pytest",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.autoFormatStrings": true,
+    "python.envFile": "${workspaceFolder}/backend/.env",
+    "python.testing.pytestPath": "${workspaceFolder}/backend/.venv/bin/pytest",
+    "python.defaultInterpreterPath": "${workspaceFolder}/backend/.venv/bin/python",
+    "python.venvPath": "${workspaceFolder}/backend/.venv",
+    "python.pythonPath": "${workspaceFolder}/backend/.venv/bin/python",
+    "black-formatter.interpreter": [
+        "${workspaceFolder}/backend/.venv/bin/python"
+    ],
+    "pylint.interpreter": [
+        "${workspaceFolder}/backend/.venv/bin/python"
+    ],
+}

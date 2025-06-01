@@ -12,10 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from fastapi import FastAPI
+from sqlmodel import SQLModel, Field
+import uuid
 
-app = FastAPI()
-
-@app.get("/hello/{app_id}")
-def custom_docs(app_id: int):
-    return {"message": "Welcome to the documentation endpoint! This is a custom message for ID: " + str(app_id)}
+class User(SQLModel, table=True):
+    id: uuid.UUID = Field(default_factory=uuid.uuid4, primary_key=True)
+    username: str
+    hashed_password: str

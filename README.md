@@ -17,3 +17,17 @@
 Just shows how to rewrite a URL using ngnix.
 
 ChatGPT conversation: https://chatgpt.com/share/683b4a4e-a368-8007-9e9b-165b23899c71
+
+.
+├── backend
+│   ├── Dockerfile
+│   ├── main.py
+│   └── requirements.txt
+├── nginx
+│   ├── logs
+│   │   ├── access.log
+│   │   └── error.log
+│   ├── default.conf
+│   └── nginx.conf
+├── docker-compose.yaml
+└── README.md

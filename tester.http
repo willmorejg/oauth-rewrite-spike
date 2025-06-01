@@ -1,0 +1,13 @@
+# @name login
+curl -X POST -d "username=demo&password=password" http://localhost:8001/internal/token
+
+###
+
+@authToken = {{login.response.body.access_token}}
+
+GET http://localhost:8001/internal/hello?app_id=42 HTTP/1.1
+Authorization: Bearer {{authToken}}
+
+###
+GET http://localhost:8000/hello/42 HTTP/1.1
+Authorization: Bearer {{authToken}}
