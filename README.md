@@ -18,7 +18,7 @@ Just shows how to rewrite a URL using ngnix.
 
 ChatGPT conversation: https://chatgpt.com/share/683b4a4e-a368-8007-9e9b-165b23899c71
 
-'
+```
 .
 ├── backend
 │   ├── Dockerfile
@@ -32,4 +32,4 @@ ChatGPT conversation: https://chatgpt.com/share/683b4a4e-a368-8007-9e9b-165b2389
 │   └── nginx.conf
 ├── docker-compose.yaml
 └── README.md
-'
+```
